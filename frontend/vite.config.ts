@@ -10,10 +10,14 @@ export default defineConfig({
     },
   },
   server: {
+    host: '0.0.0.0', // Listen on all network interfaces (required for Docker)
     port: 5173,
+    watch: {
+      usePolling: true, // Enable polling for file changes in Docker
+    },
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'http://backend:5000', // Use Docker service name
         changeOrigin: true,
       },
     },
