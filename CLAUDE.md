@@ -258,3 +258,24 @@ Mobile-first responsive design; no horizontal scroll on phone.
 5. **Image filename exposure:** Don't save as original name; randomize it
 6. **Cascading deletes:** Room deletions fail if reservations exist (by design); use `Maintenance` status instead
 7. **Timezone mismatch:** Store dates as UTC; format for user display in frontend
+
+## Git Workflow Rules
+
+### Authorization
+- **NEVER commit or push** to any branch without explicit user request
+- **ALWAYS ask** before performing any git operation (commit, push, branch creation, reset, etc.)
+- **Only act** on git commands when directly instructed by the user
+
+### Author Attribution
+- Always use the user's own git credentials for commits (default: RizzaFachrudin)
+- Do NOT add any AI/Claude attribution in commit messages or pull request descriptions. Keep the commit history clean and authored only by the user.
+
+### Branch Management
+- Never push directly to main/master branches
+- Never force push without explicit permission
+- Never delete branches without explicit instruction
+
+### Safety
+- Double-check .gitignore before staging files (ensure .env, node_modules, uploads/ are excluded)
+- Verify staged files with `git status` before committing
+- Confirm with user if unsure about any operation
