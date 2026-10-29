@@ -175,29 +175,6 @@ Key models:
 - Payment
 - Review
 
-## Environment Variables
-
-### Backend (.env)
-```env
-PORT=5000
-NODE_ENV=development
-DATABASE_URL="mysql://root:rootpassword@localhost:3306/homestay_db"
-JWT_SECRET=your-secret-key
-JWT_EXPIRES_IN=7d
-MIDTRANS_SERVER_KEY=your-server-key
-MIDTRANS_CLIENT_KEY=your-client-key
-MIDTRANS_IS_PRODUCTION=false
-UPLOAD_DIR=uploads
-MAX_FILE_SIZE=5242880
-FRONTEND_URL=http://localhost:5173
-```
-
-### Frontend (.env)
-```env
-VITE_API_URL=http://localhost:5000
-VITE_MIDTRANS_CLIENT_KEY=your-client-key
-```
-
 ## Development Workflow
 
 1. Buat branch baru untuk fitur: `git checkout -b feature/nama-fitur`
